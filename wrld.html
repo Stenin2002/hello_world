@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hello World</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+    }
+
+    #message {
+      color: #fff;
+      font-size: clamp(1.5rem, 5vw, 3rem); /* Responsive font size */
+      padding: 20px 40px;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.1); /* Glass effect */
+      backdrop-filter: blur(10px);
+      text-align: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    #message:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 600px) {
+      #message {
+        padding: 15px 25px;
+        border-radius: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="message"></div>
+  <script>
+    document.getElementById('message').textContent = '🌎 Hello, World!';
+  </script>
+</body>
+</html>
